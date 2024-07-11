@@ -2,21 +2,21 @@
 <manifest>
 
   <remote  name="PixelOS"
-           fetch="https://github.com/PixelOS-AOSP"
+           fetch="https://github.com/PixelRevived"
            revision="refs/heads/fourteen" />
 
   <remote  name="PixelOS-Gitlab"
-           fetch="https://gitlab.com/PixelOS-AOSP"
+           fetch="https://github.com/PixelRevived"
            revision="refs/heads/fourteen" />
 
   <!-- Rootdir -->
-  <project path="bionic" name="bionic" groups="pdk" remote="PixelOS" />
+  <project path="bionic" name="bionic" groups="pdk" remote="PixelRevived" />
 
   <!-- Bootable -->
-  <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="PixelOS" />
+  <project path="bootable/recovery" name="bootable_recovery" groups="pdk" remote="PixelRevived" />
 
   <!-- Build -->
-  <project path="build/make" name="build" groups="pdk" remote="PixelOS">
+  <project path="build/make" name="build" groups="pdk" remote="PixelRevived">
     <linkfile dest="build/CleanSpec.mk" src="CleanSpec.mk" />
     <linkfile dest="build/buildspec.mk.default" src="buildspec.mk.default" />
     <linkfile dest="build/core" src="core" />
@@ -24,46 +24,46 @@
     <linkfile dest="build/target" src="target" />
     <linkfile dest="build/tools" src="tools" />
   </project>
-  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="PixelOS">
+  <project path="build/soong" name="build_soong" groups="pdk,tradefed" remote="PixelRevived">
     <linkfile dest="Android.bp" src="root.bp" />
     <linkfile dest="bootstrap.bash" src="bootstrap.bash" />
   </project>
 
   <!-- External -->
-  <project path="external/arm-optimized-routines" name="external_arm-optimized-routines" groups="pdk" remote="PixelOS" />
-  <project path="external/jemalloc_new" name="external_jemalloc_new" groups="pdk" remote="PixelOS" />
+  <project path="external/arm-optimized-routines" name="external_arm-optimized-routines" groups="pdk" remote="PixelRevived" />
+  <project path="external/jemalloc_new" name="external_jemalloc_new" groups="pdk" remote="PixelRevived" />
 
   <!-- Frameworks -->
-  <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="PixelOS" />
-  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="PixelOS" />
-  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="PixelOS" />
+  <project path="frameworks/av" name="frameworks_av" groups="pdk" remote="PixelRevived" />
+  <project path="frameworks/base" name="frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="PixelRevived" />
+  <project path="frameworks/native" name="frameworks_native" groups="pdk" remote="PixelRevived" />
 
   <!-- Hardware -->
-  <project path="hardware/google/pixel-sepolicy" name="hardware_google_pixel-sepolicy" groups="generic_fs,pixel" remote="PixelOS" />
+  <project path="hardware/google/pixel-sepolicy" name="hardware_google_pixel-sepolicy" groups="generic_fs,pixel" remote="PixelRevived" />
 
   <!-- Packages -->
-  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="PixelOS" />
-  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk" remote="PixelOS" />
-  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="PixelOS" />
+  <project path="packages/apps/Settings" name="packages_apps_Settings" groups="pdk-fs" remote="PixelRevived" />
+  <project path="packages/modules/Connectivity" name="packages_modules_Connectivity" groups="pdk" remote="PixelRevived" />
+  <project path="packages/services/Telecomm" name="packages_services_Telecomm" remote="PixelRevived" />
 
   <!-- System -->
-  <project path="system/core" name="system_core" groups="pdk" remote="PixelOS" />
-  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="PixelOS" />
-  <project path="system/update_engine" name="system_update_engine" groups="pdk" remote="PixelOS" />
+  <project path="system/core" name="system_core" groups="pdk" remote="PixelRevived" />
+  <project path="system/sepolicy" name="system_sepolicy" groups="pdk" remote="PixelRevived" />
+  <project path="system/update_engine" name="system_update_engine" groups="pdk" remote="PixelRevived" />
 
   <!-- Begin Extras -->
 
   <!-- Device -->
-  <project path="device/lineage/sepolicy" name="device_lineage_sepolicy" remote="PixelOS" />
+  <project path="device/lineage/sepolicy" name="device_lineage_sepolicy" remote="PixelRevived" />
 
   <!-- Packages -->
-  <project path="packages/apps/ParanoidSense" name="packages_apps_ParanoidSense" remote="PixelOS" />
-  <project path="packages/apps/TouchGestures" name="packages_apps_TouchGestures" remote="PixelOS" />
-  <project path="packages/apps/Updates" name="packages_apps_Updates" remote="PixelOS" />
+  <project path="packages/apps/ParanoidSense" name="packages_apps_ParanoidSense" remote="PixelRevived" />
+  <project path="packages/apps/TouchGestures" name="packages_apps_TouchGestures" remote="PixelRevived" />
+  <project path="packages/apps/Updates" name="packages_apps_Updates" remote="PixelRevived" />
 
   <!-- Vendor -->
-  <project path="vendor/aosp" name="vendor_aosp" remote="PixelOS" />
-  <project path="vendor/custom-preference" name="vendor_custom-preference" remote="PixelOS" />
+  <project path="vendor/aosp" name="vendor_aosp" remote="PixelRevived" />
+  <project path="vendor/custom-preference" name="vendor_custom-preference" remote="PixelRevived" />
   <project path="vendor/gms" name="vendor_gms" clone-depth="1" remote="PixelOS-Gitlab" />
 
 </manifest>
